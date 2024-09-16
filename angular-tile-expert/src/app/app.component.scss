@@ -1,0 +1,153 @@
+.header {
+    background-color: #007bff;
+    padding: 10px;
+    height: 52px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+  }
+  
+  .header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    .navigation {
+        display: flex;
+        align-items: center;
+        .icon-sidebar {
+          padding-right: 16px;
+          padding-top: 10px;
+        }
+    }
+  }
+  
+  .logo span {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 20px;
+    padding-left: 150px;
+    padding-right: 100px;
+  }
+
+  .search-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 1000;
+  }
+  
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    min-width: fit-content;
+  }
+
+  .other-icons {
+    display: flex;
+    cursor: pointer;
+    .icon-search {
+        padding-top: 4px;
+        padding-right: 20px;
+    }
+  }
+
+  .header-icons {
+    display: flex;
+    align-items: center;
+    .mobile-view-icons {
+      display: flex;
+      align-items: center;
+      .icon {
+        margin-top: 4px;
+        padding: 0px 5px 0px 5px;
+      }
+    }
+    app-icon {
+      padding-right: 10px;
+      cursor: pointer;
+    }
+  }
+
+  .icon-btn {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+  }
+  
+  .icon-btn:focus {
+    outline: none;
+  }
+  
+  .icon-btn:hover {
+    color: #ddd;
+  }
+
+.sidebar {
+  height: 100%; 
+  width: 0; 
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  background-color: #007bff;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar a {
+  padding: 10px 15px;
+  text-decoration: none;
+  font-size: 18px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 36px;
+}
+
+.sidebar.open {
+  width: 100%;
+}
+
+@media (max-width: 414px) {
+  .header .navigation {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.cdk-overlay-dark-backdrop {
+  background-color: rgba(0, 0, 0, 0.5); 
+}
+
+.cdk-overlay-pane {
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+}

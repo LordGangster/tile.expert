@@ -1,0 +1,13 @@
+<div class="dropdown">
+    <div class="history">
+        <div class="header">
+            <p style="font-size: 11px; color: #7F878C; padding: 5px 0px 6px 16px;">История</p>
+        </div>
+        <ul>
+            <li *ngFor="let item of items">{{ item }}</li>
+        </ul>
+    </div>
+    <div class="filters">
+        <app-filters></app-filters>
+    </div>
+</div>

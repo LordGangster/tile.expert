@@ -1,0 +1,35 @@
+.mobile-search {
+    background-color: white;
+    border: 1px solid #ccc;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    app-filters {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: start !important;
+        width: 100% !important;
+        padding-left: 10px !important;
+        div {
+            width: 95vw !important;
+        }
+        div.checkbox-group {
+            flex-direction: column;
+        }
+    }
+    .search-bar {
+        padding-top: 15px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        input{
+            width: 75vw;
+            height: 48px;
+            border-radius: 24px;
+            border-style: none;
+            background-color: #F5F5F5;
+            padding-left: 20px;
+        }
+    }
+  }

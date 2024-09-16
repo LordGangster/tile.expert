@@ -1,0 +1,60 @@
+<header class="header">
+  <div class="header-container">
+    <div class="navigation">
+      <div *ngIf="isMobileDevice" class="icon-sidebar" (click)="toggleSidebar()">
+        <app-icon iconName="sidebar" size="24"></app-icon>
+      </div>
+
+      <div class="logo">
+        <img src="../assets/logotype.png" alt="Tile.Expert" />
+      </div>
+
+      <nav *ngIf="!isMobileDevice" class="nav-links">
+        <a href="#"><app-icon iconName="links" size="24"></app-icon> Ссылки</a>
+        <a href="#"><app-icon iconName="contacts" size="24"></app-icon> Контакты</a>
+        <a href="#"><app-icon iconName="union" size="24"></app-icon> Теги</a>
+        <a href="#"><app-icon iconName="star" size="24"></app-icon> Избранное</a>
+        <a href="#"><app-icon iconName="history" size="24"></app-icon> Посещения</a>
+      </nav>
+
+      <div *ngIf="!isMobileDevice" class="other-icons">
+        <div #searchIcon class="icon-search" (click)="openSearchBar()">
+          <app-icon iconName="search" size="24"></app-icon>
+        </div>
+        <div class="icon-add">
+          <app-icon iconName="add" size="24"></app-icon>
+        </div>
+      </div>
+    </div>
+
+    <div class="header-icons">
+      <div *ngIf="isMobileDevice" class="mobile-view-icons">
+        <div class="icon-add">
+          <app-icon iconName="add" size="20"></app-icon>
+        </div>
+        <div class="icon">
+          <app-icon iconName="history" size="24"></app-icon>
+        </div>
+        <div #searchIcon class="icon" (click)="openMobileSearch()">
+          <app-icon iconName="search" size="24"></app-icon>
+        </div>
+      </div>
+      <app-icon iconName="notification" size="24"></app-icon>
+      <img *ngIf="!isMobileDevice" src="../assets/AVA.png" alt="Tile.Expert" />
+    </div>
+  </div>
+</header>
+
+<div class="sidebar" [ngClass]="{'open': isSidebarOpen}">
+  <div style="padding-left: 10px;">
+    <img src="../assets/logotype.png" alt="Tile.Expert" />
+  </div>
+  <div *ngIf="isSidebarOpen">
+    <a href="javascript:void(0)" class="closebtn" (click)="closeSidebar()">×</a>
+    <a href="#"><app-icon iconName="links" size="24"></app-icon> Ссылки</a>
+    <a href="#"><app-icon iconName="contacts" size="24"></app-icon> Контакты</a>
+    <a href="#"><app-icon iconName="union" size="24"></app-icon> Теги</a>
+    <a href="#"><app-icon iconName="star" size="24"></app-icon> Избранное</a>
+    <a href="#"><app-icon iconName="history" size="24"></app-icon> Посещения</a>
+  </div>
+</div>

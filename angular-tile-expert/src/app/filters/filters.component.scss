@@ -1,0 +1,144 @@
+.input-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 439px;
+    height: 65px;
+    padding-top: 10px;
+    &.mobile {
+        width: 95vw !important;
+    }
+  }
+
+  .input-wrapper label {
+    font-size: 14px;
+    color: #888;
+    margin-left: 15px;
+    margin-bottom: -10px;
+    z-index: 1000;
+    background-color: white;
+    width: 40px;
+  }
+
+  .input-field {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 8px;
+    background-color: #fff;
+    height: 35px;
+  }
+
+  .input-field input {
+    border: none;
+    outline: none;
+    flex-grow: 1;
+    font-size: 14px;
+    padding: 0 10px;
+    color: #656E73;
+  }
+
+  .input-field input::placeholder {
+    color: #aaa;
+  }
+
+  .input-field button {
+    background-color: #f0f0f0;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #656E73;
+  }
+
+  .input-field button:hover {
+    background-color: #ddd;
+  }
+
+  .checkbox-group {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 35px;
+    margin-bottom: 20px;
+    &.mobile {
+        flex-direction: column !important;
+    }
+  }
+
+  .checkbox-group label {
+    display: flex;
+    font-size: 14px;
+    padding-left: 5px;
+    &.mobile {
+        align-items: center;
+    }
+  }
+
+  .checkbox-group label input {
+    margin-right: 5px; 
+  }
+
+  .checkbox-group-header {
+    font-size: 14px;
+    margin-bottom: 13px;
+  }
+
+  .checkbox-group-section {
+    margin-bottom: 20px;
+  }
+
+  .checkboxes {
+    padding-top: 24px;
+  }
+
+  .custom-checkbox .checkmark {
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+    border: 2px solid #ccc;
+    display: inline-block;
+    position: relative;
+    border-radius: 4px;
+  }
+  
+  .custom-checkbox .checkmark.checked {
+    background-color: #656E73;
+    border-color: #656E73;
+  }
+  
+  .custom-checkbox .checkmark.checked::after {
+    content: "✔";
+    color: white;
+    font-size: 14px;
+    position: absolute;
+    top: -2px;
+    left: 2px;
+  }
+  
+  @media (max-width: 414px) {
+    .custom-checkbox .checkmark {
+      width: 32px;
+      height: 32px;
+      border: 0px solid #ccc;
+      border-radius: 50%; 
+      background-color: #f5f5f5; 
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    .custom-checkbox .checkmark.checked {
+      background-color: #e6e6e6; 
+      border-color: #656E73;
+    }
+  
+    .custom-checkbox .checkmark.checked::after {
+      content: "✔";
+      color: #656E73;
+      font-size: 16px;
+      position: relative;
+      top: 0;
+      left: 0;
+    }
+  }

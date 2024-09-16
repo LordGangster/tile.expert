@@ -1,0 +1,60 @@
+<div [ngClass]="{'input-wrapper': true, 'mobile': isMobileDevice}">
+  <label for="author">Автор</label>
+  <div class="input-field">
+    <input type="text" id="author" placeholder="Имя или должность">
+    <button type="button"><b>Я</b></button>
+  </div>
+</div>
+
+<div class="checkboxes">
+  <div class="checkbox-group-section">
+    <div [ngClass]="{'checkbox-group': true, 'mobile': isMobileDevice}">
+      <label [ngClass]="{'mobile': isMobileDevice}" (click)="toggleFilter('participant')">
+        <div class="custom-checkbox">
+          <span class="checkmark" [ngClass]="{'checked': filters.participant}"></span>
+        </div>
+        Я участник
+      </label>
+
+      <label [ngClass]="{'mobile': isMobileDevice}" (click)="toggleFilter('strictSearch')">
+        <div class="custom-checkbox">
+          <span class="checkmark" [ngClass]="{'checked': filters.strictSearch}"></span>
+        </div>
+        Строгий поиск
+      </label>
+
+      <label [ngClass]="{'mobile': isMobileDevice}" (click)="toggleFilter('inHeadings')">
+        <div class="custom-checkbox">
+          <span class="checkmark" [ngClass]="{'checked': filters.inHeadings}"></span>
+        </div>
+        В заголовках
+      </label>
+    </div>
+  </div>
+
+  <div class="checkbox-group-section">
+    <div class="checkbox-group-header">Только</div>
+    <div [ngClass]="{'checkbox-group': true, 'mobile': isMobileDevice}">
+      <label [ngClass]="{'mobile': isMobileDevice}" (click)="toggleFilter('tags')">
+        <div class="custom-checkbox">
+          <span class="checkmark" [ngClass]="{'checked': filters.tags}"></span>
+        </div>
+        Теги
+      </label>
+
+      <label [ngClass]="{'mobile': isMobileDevice}" (click)="toggleFilter('requests')">
+        <div class="custom-checkbox">
+          <span class="checkmark" [ngClass]="{'checked': filters.requests}"></span>
+        </div>
+        Просьбы
+      </label>
+
+      <label [ngClass]="{'mobile': isMobileDevice}" (click)="toggleFilter('contacts')">
+        <div class="custom-checkbox">
+          <span class="checkmark" [ngClass]="{'checked': filters.contacts}"></span>
+        </div>
+        Контакты
+      </label>
+    </div>
+  </div>
+</div>
